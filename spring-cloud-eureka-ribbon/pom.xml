@@ -8,8 +8,8 @@
 		<artifactId>spring-cloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>spring-cloud-config</artifactId>
-	<name>spring-cloud-config</name>
+	<artifactId>spring-cloud-eureka-ribbon</artifactId>
+	<name>spring-cloud-eureka-ribbon</name>
 	<url>http://maven.apache.org</url>
 	
 	<build>
@@ -22,22 +22,25 @@
 	</build>
 	
 	<dependencyManagement>
-		<dependencies>
-			<dependency>
+	    <dependencies>
+	        <dependency>
 				<groupId>org.springframework.cloud</groupId>
 		        <artifactId>spring-cloud-starter-parent</artifactId>
 		        <version>Camden.SR7</version>
 		        <type>pom</type>
 	    		<scope>import</scope>
 			</dependency>
-		</dependencies>
+	    </dependencies>
 	</dependencyManagement>
 	
 	<dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency> 
-  
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-ribbon</artifactId>
+	    </dependency>
 	</dependencies>
 </project>
